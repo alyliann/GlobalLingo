@@ -27,9 +27,9 @@ with app.app_context():
 def hello_world():
     return render_template('home.html', subtitle='Home Page', text='This is the home page')
 
-@app.route("/about")
+@app.route("/translator")
 def about():
-    return render_template('about.html', subtitle='About Page', text='This is the about page')
+   return render_template('translator.html', subtitle='Translator', text='This is the translator')
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
