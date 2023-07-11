@@ -26,10 +26,10 @@ with app.app_context():
 
 @app.route("/")
 def home():
-    '''home_form = HomeForm()
-    if home_form.validate_on_submit(): # change "validate_on_submit" function
-        return redirect(url_for('translator')) # if so - send to translator page'''
-    return render_template('home.html', subtitle='Translator', text='Welcome to translator!')
+    # home_form = HomeForm()
+    # if home_form.validate_on_submit(): # change "validate_on_submit" function
+    #     return redirect(url_for('translator')) # if so - send to translator page
+    return render_template('home.html', text='Welcome to translator!')
 
 @app.route("/translator", methods= ['GET','POST'])
 def translator():
