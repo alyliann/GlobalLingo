@@ -2,8 +2,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, Length
 
-'''class HomeForm(FlaskForm):
-    redirect_button = Button('Go To Translate')'''
+# class HomeForm(FlaskForm):
+#     redirect_button = SubmitField('Go To Translate')
 
 class TranslateForm(FlaskForm):
     text_input = TextAreaField('Enter text to translate',
