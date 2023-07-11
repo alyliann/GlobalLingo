@@ -36,11 +36,32 @@ def translator():
     form = TranslateForm()
     if form.validate_on_submit():
         translator_obj = Translator()
-        result = translator_obj.translate(form.original_text, dest=form.language)
+
+        language = parseLanguage(str(form.language))
+        text_input = parseText(str(form.text_input))
+
+        result = translator_obj.translate(text_input, dest=language)
         translated = result.text
         pronounced = result.pronunciation
-        return render_template('translator.html', title='Translator', final_translation=translated, final_pronunciation=pronounced)
+        
+        if pronounced == None:
+            pronounced = translated
+
+        return render_template('translator.html', title='Translator', final_translation=translated, final_pronunciation=pronounced, form=form)
     return render_template('translator.html', title='Translator', form=form)
+
+def parseLanguage(language):
+    # <input id="language" name="language" required type="text" value="fr">
+    index = language.find('value')
+    language = language[index+7:-2] # should be ' fr"> '
+    return language
+
+def parseText(text_input):
+    # <textarea id="text_input" maxlength="10000" minlength="1" name="text_input" required>Hello</textarea>
+    index = text_input.find('>')
+    text_input = text_input[index+1:-11]
+    return text_input
+
 
 '''@app.route("/register", methods=['GET', 'POST'])
 def register():
