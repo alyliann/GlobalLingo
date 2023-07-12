@@ -1,4 +1,5 @@
 import git
+import googletrans
 from googletrans import Translator
 from forms import TranslateForm#, HomeForm
 from flask_sqlalchemy import SQLAlchemy
@@ -38,13 +39,16 @@ def translator():
     if form.validate_on_submit():
         translator_obj = Translator()
 
+        valid_inputs = googletrans.LANGUAGES
+        languages = list(valid_inputs.items())
+
         language = parseLanguage(str(form.language))
         text_input = parseText(str(form.text_input))
 
         result = translator_obj.translate(text_input, dest=language)
         translated = result.text
         pronounced = result.pronunciation
-        
+
         if pronounced == None:
             pronounced = translated
 
