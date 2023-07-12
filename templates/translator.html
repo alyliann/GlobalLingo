@@ -47,9 +47,14 @@
     </form>
     <div class="form-group">
         <p>
-            Translation: {{ final_translation }}
             <br>
-            Pronunciation: {{ final_pronunciation }}
+            <strong>{{ final_sentence }}</strong>
+            <br>
+            <div id="output-area">
+                Translation: {{ final_translation }}
+                <br>
+                Pronunciation: {{ final_pronunciation }}
+            </div>
         </p>
     </div>
 </div>

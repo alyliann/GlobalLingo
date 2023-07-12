@@ -3,14 +3,6 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, Length, AnyOf
 
-# class HomeForm(FlaskForm):
-#     redirect_button = SubmitField('Go To Translate')
-
-# valid_inputs = googletrans.LANGUAGES
-# langcodes = valid_inputs.keys()
-# languages = valid_inputs.values()
-# valid_inputs = langcodes + languages
-
 valid_inputs = googletrans.LANGUAGES
 languages = list(valid_inputs.keys()) + list(valid_inputs.values())
 
