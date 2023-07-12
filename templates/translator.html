@@ -1,4 +1,9 @@
 {% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
 {% with messages = get_flashed_messages(with_categories=true) %}
 {% if messages %}
 {% for category, message in messages %}
@@ -9,6 +14,9 @@
 {% endif %}
 {% endwith %}
 {% block content %}
+<h1 id="title">
+    GlobalLingo
+</h1>
 <div class="content-section">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
@@ -41,19 +49,23 @@
             </div>
         </fieldset>
         <br>
-        <div class="form-group">
+        <div class="form-btn" class="form-group" >
             {{ form.translate_text(class="btn btn-outline-info") }}
         </div>
     </form>
-    <div class="form-group">
+    <div id="below-btn">
         <p>
             <br>
             <strong>{{ final_sentence }}</strong>
             <br>
-            <div id="output-area">
-                Translation: {{ final_translation }}
+            <div>
+                Translation: 
                 <br>
-                Pronunciation: {{ final_pronunciation }}
+                <textarea name="" id="" cols="" rows="" readonly>{{ final_translation }}</textarea>
+                <br>
+                Pronunciation:
+                <br>
+                <textarea name="" id="" cols="" rows="" readonly>{{ final_pronunciation }}</textarea> 
             </div>
         </p>
     </div>

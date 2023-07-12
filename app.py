@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_behind_proxy import FlaskBehindProxy
 from flask import Flask, render_template, url_for, flash, redirect, request
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 proxied = FlaskBehindProxy(app)
 app.config['SECRET_KEY'] = '3f8742cae18a7f0af440fe7979f95617'
 
@@ -54,7 +54,7 @@ def translator():
             translated_lang = language.capitalize()
         if pronounced == None:
             pronounced = translated
-        sentence = f"Translating {original_lang} -> {translated_lang}"
+        sentence = f"Translating {original_lang} -> {translated_lang}..."
 
         translation = Translation(lang1=original_lang, original_text=text_input, lang2=translated_lang, translated_text=translated, pronunced_text=pronounced)
         db.session.add(translation)
@@ -73,18 +73,6 @@ def parseText(text_input):
     index = text_input.find('>')
     text_input = text_input[index+1:-11]
     return text_input
-
-
-'''@app.route("/register", methods=['GET', 'POST'])
-def register():
-    form = InputForm()
-    if form.validate_on_submit(): # checks if entries are valid
-        user = User(username=form.username.data, email=form.email.data, password=form.password.data)
-        db.session.add(user)
-        db.session.commit()
-        flash(f'Account created for {form.username.data}!', 'success')
-        return redirect(url_for('home')) # if so - send to home page
-    return render_template('register.html', title='Register', form=form)'''
 
 # leave this alone: connects to pythonanywhere
 @app.route("/update_server", methods=['POST'])

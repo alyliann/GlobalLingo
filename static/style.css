@@ -1,3 +1,18 @@
-#output-area {
+#title {
     text-align: center;
+    font-family: 'Pangolin', cursive;
+    padding: 3%;
+}
+textarea {
+    border-color: lightgray;
+    width: 100%;
+    height: 80px;
+    text-s;
+}
+#below-btn {
+    font-weight: bold;
+    font-family: 'Pangolin', cursive;
+}
+.form-btn {
+    font-family: 'Pangolin', cursive;
 }
