@@ -1,5 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h2>{{ subtitle }}</h2>
-    <p>{{ text }}</p>
+<p>{{ text }}</p>
+<p>
+    This is where the description and stuff will go
+</p>
+<a class="btn btn-outline-info" href=".{{ url_for('translator') }}">Go to Translator</a>
 {% endblock content %}
