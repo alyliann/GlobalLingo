@@ -1,11 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>
-    Welcome to our Translator!
+<div>
+<h1 id="home_title">
+    GlobalLingo
 </h1>
-<p>{{ text }}</p>
-<p>
-    This is where the description and stuff will go
+<h4 id="welcome"> Welcome to our GlobalLingo Translator</h4>
+</div>
+<p id="home_words">
+    Need help with learning a new language?
+    <br>
+    In another country and want to communicate in the spoken language? 
+    <br>
+    Use our GlobalLingo Translator by clicking the button below!
+</br>
+</br>
 </p>
-<a class="btn btn-outline-info" href=".{{ url_for('translator') }}">Go to Translator</a>
+<div class="translate-button-container"> 
+    <a class="btn btn-outline-info" href=".{{ url_for('translator') }}">Go to Translator</a>
+</div>
 {% endblock content %}
