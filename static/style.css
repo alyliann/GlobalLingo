@@ -11,16 +11,13 @@ textarea {
     height: 80px;
 }
 
-#right {
-    font-weight: bold;
-    font-family: 'Pangolin', cursive;
+.language-input {
+    height: 80px;
+    margin-bottom: 5px;
 }
 
-fieldset {
-    display: inline-block;
-    margin: auto;
-}
+.load-message {
+    font-family: 'Pangola', cursive;
+    text-align: center;
 
-.content-section {
-    min-width: fit-content;
 }
