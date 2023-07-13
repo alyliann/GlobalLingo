@@ -10,5 +10,6 @@ class TranslateForm(FlaskForm):
     text_input = TextAreaField('Enter text to translate',
                                validators=[DataRequired(), Length(min=1, max=10000)])
     language = StringField('Enter a language to translate to',
-                           validators=[DataRequired(), AnyOf(languages,f"Please enter one of the following languages or its language code: {list(valid_inputs.values())}")])
+                           validators=[DataRequired(), AnyOf(languages,"Please enter a valid language or language code. (English/en, French/fr, etc.)")])
+                           # f"Please enter one of the following languages or its language code: {list(valid_inputs.values())}"
     translate_text = SubmitField('Translate')
