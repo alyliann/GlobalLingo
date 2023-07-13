@@ -37,4 +37,5 @@ python3 app.py
 
 ## How the code works
 
-[Description]
+`app.py` and `forms.py` provide the backend for the GlobalLingo program, with the files in `templates` and `static` providing the frontend.
+GlobalLingo takes a language and text as input, using the googletrans API to translate the user's text to the desired language.
