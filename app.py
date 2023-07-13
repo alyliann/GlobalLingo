@@ -69,6 +69,10 @@ def parseLanguage(language):
     language = language[index+7:-2]
     if language.lower() == 'chinese':
         language = 'chinese (simplified)'
+    elif language.lower() == 'kurdish' or language.lower() == 'kurmanji':
+        language = 'kurdish (kurmanji)'
+    elif language.lower() == 'myanmar' or language.lower() == 'burmese':
+        language = 'myanmar (burmese)'
     return language
 
 def parseText(text_input):
