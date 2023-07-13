@@ -1,5 +1,3 @@
-## README file
+![workflow test status badge](https://github.com/alyliann/SEO-Translator/actions/workflows/test.yaml/badge.svg)
 
-Use View > Panels > Join with Closest to make one panel.
-
-Click "VS Code" in the top menu bar to open VS Code.
+# SEO-Week-3-Project: 
