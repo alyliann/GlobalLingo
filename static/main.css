@@ -22,6 +22,17 @@
 
 body {
   background: linear-gradient(to right,
-      #9af9f8,
-      #30a5b5);
+  #9af9f8, #30a5b5
+  );
+}
+
+.btn-outline-custom {
+  color: #16575f;
+  border-color: #16575f;
+}
+
+.btn-outline-custom:hover {
+  color: #16575f;
+  background-color: #81ffe4;
+  border-color: #16575f;
 }
