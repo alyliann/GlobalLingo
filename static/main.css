@@ -14,7 +14,12 @@
 }
 .translate-button-container {
   font-family: 'Pangolin', cursive;
+  color: #2e767f;
   text-align: center;
 }
 body {
-
+  background: linear-gradient(to right,
+  #9af9f8,
+  #30a5b5
+  );
+}
