@@ -67,6 +67,8 @@ def translator():
 def parseLanguage(language):
     index = language.find('value')
     language = language[index+7:-2]
+    if language.lower() == 'chinese':
+        language = 'chinese (simplified)'
     return language
 
 def parseText(text_input):
