@@ -1,7 +1,7 @@
 ![workflow test status badge](https://github.com/alyliann/SEO-Translator/actions/workflows/test.yaml/badge.svg)
 
-# SEO-Week-3-Project: 
-SEO Tech Developer program Week 2 project created by Alysa Vega and Chinyere Amasiatu
+# SEO-Project-2: GlobalLingo
+SEO Tech Developer program project 2 created by Alysa Vega, Chinyere Amasiatu, and Myah Jackson-Solomon.
 
 ## Setup instructions
 
