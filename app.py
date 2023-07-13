@@ -1,4 +1,4 @@
-#import git
+import git
 import googletrans
 from googletrans import Translator
 from forms import TranslateForm
