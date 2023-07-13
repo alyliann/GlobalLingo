@@ -21,7 +21,7 @@
     <form method="POST" action="">
        {{ form.hidden_tag() }}
         <fieldset class="form-group">
-            <div class="form-group">
+            <div class="form-group left">
                 {{ form.language.label(class="form-control-label") }}
                 {% if form.language.errors %}
                 {{ form.language(class="form-control form-control-lg is-invalid") }}
@@ -33,8 +33,6 @@
                 {% else %}
                 {{ form.language(class="form-control form-control-lg") }}
                 {% endif %}
-            </div>
-            <div class="form-group">
                 {{ form.text_input.label(class="form-control-label") }}
                 {% if form.text_input.errors %}
                 {{ form.text_input(class="form-control form-control-lg is-invalid") }}
@@ -47,27 +45,24 @@
                 {{ form.text_input(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
+            <div id="right">
+                    <strong>{{ final_sentence }}</strong>
+                    <div>
+                        <label for="translation-output">Translation: </label>
+                        <br>
+                        <textarea name="translation-output" id="" cols="" rows="" readonly>{{ final_translation }}</textarea>
+                        <br>
+                        <label for="pronunciation-output">Pronunciation: </label>
+                        <br>
+                        <textarea name="pronunciation-output" id="" cols="" rows="" readonly>{{ final_pronunciation }}</textarea> 
+                    </div>
+            </div>
         </fieldset>
         <br>
-        <div class="form-btn" class="form-group" >
+        <div class="translate-button-container" class="form-group" >
             {{ form.translate_text(class="btn btn-outline-info") }}
         </div>
     </form>
-    <div id="below-btn">
-        <p>
-            <br>
-            <strong>{{ final_sentence }}</strong>
-            <br>
-            <div>
-                Translation: 
-                <br>
-                <textarea name="" id="" cols="" rows="" readonly>{{ final_translation }}</textarea>
-                <br>
-                Pronunciation:
-                <br>
-                <textarea name="" id="" cols="" rows="" readonly>{{ final_pronunciation }}</textarea> 
-            </div>
-        </p>
-    </div>
+    
 </div>
 {% endblock content %}
