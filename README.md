@@ -1,4 +1,4 @@
-![workflow test status badge](https://github.com/alyliann/SEO-Translator/actions/workflows/test.yaml/badge.svg)
+![workflow test status badge](https://github.com/alyliann/GlobalLingo/actions/workflows/test.yaml/badge.svg)
 
 # SEO-Project-2: GlobalLingo
 SEO Tech Developer program project 2 created by Alysa Vega, Chinyere Amasiatu, and Myah Jackson-Solomon.
