@@ -6,6 +6,10 @@ SEO Tech Developer program project 2 created by Alysa Vega, Chinyere Amasiatu, a
 ## Setup instructions
 
 #### Libraries to install
+* GitPython
+```
+pip install GitPython
+```
 * googletrans
 ```
 pip install googletrans==4.0.0-rc1
