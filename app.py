@@ -80,7 +80,6 @@ def parseText(text_input):
     text_input = text_input[index+1:-11]
     return text_input
 
-# leave this alone: connects to pythonanywhere
 @app.route("/update_server", methods=['POST'])
 def webhook():
     if request.method == 'POST':
