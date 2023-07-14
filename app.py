@@ -73,7 +73,7 @@ def parseLanguage(language):
         language = 'kurdish (kurmanji)'
     elif language.lower() == 'myanmar' or language.lower() == 'burmese':
         language = 'myanmar (burmese)'
-    return language
+    return language.lower()
 
 def parseText(text_input):
     index = text_input.find('>')
