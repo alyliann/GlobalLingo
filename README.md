@@ -6,9 +6,13 @@ SEO Tech Developer program project 2 created by Alysa Vega, Chinyere Amasiatu, a
 ## Setup instructions
 
 #### Libraries to install
-* Flask
+* googletrans
 ```
-pip install Flask
+pip install googletrans==4.0.0-rc1
+```
+* Flask-WTF
+```
+pip install Flask-WTF
 ```
 * Flask-SQLAlchemy
 ```
@@ -17,14 +21,6 @@ pip install Flask-SQLAlchemy
 * flask-behind-proxy
 ```
 pip install flask-behind-proxy
-```
-* googletrans
-```
-pip install googletrans==4.0.0-rc1
-```
-* Flask-WTF
-```
-pip install Flask-WTF
 ```
 
 
